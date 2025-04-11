@@ -14,7 +14,7 @@ async function sendMessage() {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ prompt: userText, maxlength :50}),
+            body: JSON.stringify({ prompt: userText, max_length: 50 }), // fixed here
         });
 
         const data = await response.json();
