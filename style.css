@@ -106,24 +106,32 @@ header {
 @media (max-width: 600px) {
     .logo {
         height: 30px;
+        width: auto; /* maintains aspect ratio */
+        max-width: 100%;
     }
 
     header {
         font-size: 1.2rem;
     }
-}
 
-@media (max-width: 600px) {
-    .logo {
-        height: 40px;
-        width: 40px;
-    }
-}
-
-
-@media (max-width: 600px) {
     .chat-box {
-        height: 90vh;
+        height: 70vh; /* Reduced to make room for input area */
         width: 100%;
+        overflow-y: auto; /* Enables scrolling inside the chat box */
+    }
+
+    .chat-input-area {
+        height: 30vh; /* Enough space to type, can adjust as needed */
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: #fff; /* Optional: visible input area */
+        padding: 10px;
+        box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+
+    body {
+        margin-bottom: 30vh; /* Prevent chat from going under input area */
     }
 }
