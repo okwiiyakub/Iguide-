@@ -9,7 +9,7 @@ async function sendMessage() {
     input.value = "";
 
     try {
-        const response = await fetch("https://iguide-f04b608b-20f2-48b1-a7ef.ahumain.cranecloud.io/generate", {
+        const response = await fetch("https://yakubo-ae60b024-cbc3-48df-a3fc.ahumain.cranecloud.io/generate", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
